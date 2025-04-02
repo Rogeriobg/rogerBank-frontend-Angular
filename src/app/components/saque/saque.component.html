@@ -1,0 +1,23 @@
+<div >
+    <app-header [menuRoutes]="menuRoutes"></app-header>
+    </div>
+<div class="card">
+    <app-logout-button></app-logout-button>
+    <h2>Realizar Saque</h2>
+  
+    <label for="valor">Valor do Saque:</label>
+    <input 
+      type="number" 
+      id="valor" 
+      [(ngModel)]="valorSaque" 
+      
+    />
+  
+    <button (click)="sacar()">Sacar</button>
+  
+    <p *ngIf="mensagem" [ngClass]="mensagemSucesso ? 'sucesso' : 'erro'">
+      {{ mensagem }}
+    </p>
+
+    <div> <app-footer></app-footer>
+  </div>

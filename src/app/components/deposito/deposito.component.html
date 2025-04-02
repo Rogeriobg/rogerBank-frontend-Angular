@@ -1,0 +1,13 @@
+<div >
+  <app-header [menuRoutes]="depositoRoutes"></app-header>
+  </div>
+
+<div class="deposito-container">
+  <app-logout-button></app-logout-button>
+    <h2>Depositar</h2>
+    <input type="number" [(ngModel)]="valorDeposito" name="valorDeposito" class="input-field" required min="1" placeholder="Digite o valor">
+    <button (click)="depositar()" class="btn form-control">Enviar</button>
+    <p *ngIf="mensagem">{{ mensagem }}</p>
+  </div>
+  <div> <app-footer></app-footer>
+  </div>

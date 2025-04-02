@@ -1,0 +1,92 @@
+.container {
+  display: flex; /* Flexbox para alinhar os itens em linha */
+  justify-content: space-between; /* Espaça os itens igualmente entre as colunas */
+  align-items: flex-start; /* Alinha os itens ao topo */
+  height: 100vh; /* Faz o conteúdo ocupar toda a altura da tela */
+  padding: 20px;
+  margin-top: 60px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column; /* Alinha o texto e a imagem na vertical dentro dessa coluna */
+  justify-content: flex-start;
+  max-width: 320px; /* Limita a largura do texto */
+  flex: 1; /* Permite que essa coluna ocupe o restante do espaço disponível */
+  margin-top: 30px;
+  margin-left: -90px;
+}
+
+.card {
+  width: 350px; /* Largura do card */
+  height: 355px; /* Altura do card */
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+img {
+  height: 340px;
+  width: 340px;
+  border-radius: 50%;
+  object-fit: contain;
+  margin-right: 20px; /* Pequeno espaço à direita da imagem */
+  margin-top: 30px;
+}
+
+.text-principal {
+  font-size: 22px;
+  line-height: 1.6;
+  color: #333;
+  margin-top: -30px;
+  font-weight: bold;
+  text-align: justify;
+}
+
+h4 {
+  text-align: center;
+}
+p{
+  text-align: justify;
+}
+.btn-continuar {
+  background-color: rgb(31, 203, 226);
+  font-size: 20px;
+  color: white;
+}
+
+.btn-criar {
+  background-color: white;
+  color: rgb(31, 203, 226);
+  margin-top: 20px;
+  font-size: 20px;
+}
+.email{
+  margin-top:-250px;
+}
+@keyframes rotateImage {
+  0% {
+    transform: rotateY(0deg);  /* Início da rotação (posição normal) */
+  }
+  100% {
+    transform: rotateY(1080deg);  /* 1080 graus (3 giros de 360 graus) */
+  }
+}
+
+img {
+  animation: rotateImage 6s linear infinite;  /* 6 segundos para 3 giros contínuos */
+  display: block;
+  margin: 0 auto;  /* Para centralizar a imagem */
+  height: 340px;  /* Ajuste do tamanho da imagem */
+  width: 340px;   /* Ajuste do tamanho da imagem */
+  transform-style: preserve-3d;  /* Para manter a rotação no 3D */
+}

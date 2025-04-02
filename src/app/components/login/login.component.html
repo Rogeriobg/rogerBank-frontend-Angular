@@ -1,0 +1,62 @@
+<app-header></app-header>
+<div class="container">
+  <!-- Coluna para Imagem -->
+  <div class="image-container">
+    <img [src]="imagePath" alt="Logo RogerBank" class="logo" />
+  </div>
+
+  <!-- Coluna para Texto -->
+  <div class="text-container">
+    <h1 class="text-principal">
+      Projeto criado para estudar a api node js com Angular standalone e a conexão com moongoDB.
+    </h1>
+    <p>Este é um excelente projeto para a prática de conceitos fundamentais de desenvolvimento web, como autenticação, controle de sessão, interações com banco de dados. Ele é ideal para quem busca entender melhor como integrar um back-end robusto com um front-end dinâmico, utilizando tecnologias modernas e eficientes como Node.js e Angular.
+       </p>
+  </div>
+
+  <!-- Coluna para Card de Login -->
+  <div class="card">
+    <h4>Acesse sua conta</h4>
+    <form *ngIf="!mostrarRegistro">
+      <div class="mb-3 email">
+        <input type="email" class="form-control" [(ngModel)]="email" name="email" placeholder="Email" required />
+      </div>
+
+      <!-- Botão para verificar o email antes de mostrar a senha -->
+      <button type="button" class="btn-continuar form-control" (click)="verificarEmail()">Continuar</button>
+
+      <div *ngIf="emailExiste" class="mb-3">
+        <label>Senha:</label>
+        <input type="password" class="form-control" [(ngModel)]="password" name="password" required />
+      </div>
+
+      <p *ngIf="erroEmail" class="text-danger">Usuário não cadastrado.</p>
+
+      <button *ngIf="emailExiste" type="submit" class="btn btn-primary" (click)="onLogin()">Entrar</button>
+
+      <!-- O botão para cadastro sempre será visível abaixo do campo "Continuar" -->
+      <button *ngIf="!emailExiste" type="button" class="btn-criar form-control" (click)="mostrarRegistro = true">Criar conta</button>
+    </form>
+
+    <!-- Formulário de Registro -->
+    <form *ngIf="mostrarRegistro" (submit)="onRegister()">
+      <h2>Cadastro</h2>
+      <div class="mb-3">
+        <label>Nome:</label>
+        <input type="text" class="form-control" [(ngModel)]="name" name="name" required />
+      </div>
+      <div class="mb-3">
+        <label>Email:</label>
+        <input type="email" class="form-control" [(ngModel)]="email" name="email" required />
+      </div>
+      <div class="mb-3">
+        <label>Senha:</label>
+        <input type="password" class="form-control" [(ngModel)]="password" name="password" required />
+      </div>
+      <button type="submit" class="btn btn-success">Registrar</button>
+    </form>
+  </div>
+ 
+</div>
+<div> <app-footer></app-footer>
+</div>

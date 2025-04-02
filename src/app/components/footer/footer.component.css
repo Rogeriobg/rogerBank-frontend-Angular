@@ -1,0 +1,30 @@
+.footer-background {
+  background-color: #896137;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 10px 0;
+  font-size: 18px;
+}
+  img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: contain;
+    
+  }
+  
+  .text-lg {
+    font-size: 20px;
+    font-style: italic;
+    color: white;
+ 
+  }
+  

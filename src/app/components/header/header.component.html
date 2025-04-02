@@ -1,0 +1,26 @@
+<header >
+
+
+    <div class="flex items-center">
+        <!-- Imagem do logo -->
+        <img [src]="imagePath" alt="Logo RogerBank" class="h-10 w-auto logo" />
+        <h1 class="text-lg">RogerBank</h1>
+      </div>
+      <nav *ngIf="menuRoutes.length > 0">
+        <ul>
+          <li *ngFor="let route of menuRoutes">
+            <a [routerLink]="route.path" routerLinkActive="active">{{ route.label }}</a>
+          </li>
+        </ul>
+      </nav>
+    
+    <!-- Select para troca de idioma -->
+    <div>
+      <select (change)="trocarIdioma($event)" class="p-2 rounded text-black">
+        <option value="pt">Português</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+  </header>
+
+  

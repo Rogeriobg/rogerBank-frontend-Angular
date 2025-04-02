@@ -3,9 +3,10 @@ import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [RouterOutlet], // ✅ Importa o RouterOutlet para exibir as rotas
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'] // ✅ Corrigido "styleUrls" (com "s")
 })
 export class AppComponent {
   title = 'rogerbank';

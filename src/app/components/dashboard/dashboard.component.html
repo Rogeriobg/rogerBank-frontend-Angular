@@ -1,0 +1,11 @@
+
+
+<div *ngIf="user">
+  <app-header [menuRoutes]="dashboardRoutes"></app-header>
+    <h2 class="usuario">Bem-vindo, {{ user.name }}!</h2>
+  </div>
+  
+  <app-logout-button></app-logout-button> <!-- Botão de logout aqui -->
+  
+
+  <div> <app-footer></app-footer>

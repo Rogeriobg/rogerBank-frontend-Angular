@@ -1,0 +1,19 @@
+<div class="saldo-card">
+  <app-header [menuRoutes]="menuRoutes"></app-header>
+
+  <div class="card">
+    <app-logout-button></app-logout-button>
+
+    <h2>Saldo Atual</h2>
+
+    <div *ngIf="saldoValido; else erro" class="saldo-box">
+      <p>R$ {{ saldo | number: '1.2-2' }}</p>  <!-- Formatação com 2 casas decimais -->
+    </div>
+
+    <ng-template #erro>
+      <p class="erro-mensagem">{{ mensagemErro }}</p>
+    </ng-template>
+  </div>
+
+  <app-footer></app-footer>
+</div>

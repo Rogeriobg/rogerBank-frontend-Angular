@@ -1,0 +1,31 @@
+.card {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 300px;
+  margin: auto;
+  margin-top:180px;
+  background-color: #f9f9f9;
+}
+  
+  .saldo-content h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .saldo-box {
+    background:rgba(122, 72, 5, 0.29);
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #28a745; /* Verde para saldo positivo */
+  }
+  
+  .erro-mensagem {
+    color: #d9534f; /* Vermelho para erro */
+    font-weight: bold;
+    margin-top: 10px;
+  }

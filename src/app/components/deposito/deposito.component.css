@@ -1,0 +1,44 @@
+.deposito-container {
+
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    max-width: 300px;
+    margin: auto;
+    margin-top:180px;
+    background-color: #f9f9f9;
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .btn {
+    background-color:rgb(31, 203, 226);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #218838;
+  }
+  .btn-sair {
+    width: 80px;
+    height: 30px;
+    border-radius: 20px;
+    border: solid 1px rgb(31, 203, 226);
+    background-color: white;
+    color: rgb(31, 203, 226);
+    position: fixed;
+    top: 120px;  /* Ajuste a distância do topo */
+    right: 20px; /* Ajuste a distância da direita */
+    z-index: 1000; /* Para garantir que o botão fique sobre outros elementos */
+}
