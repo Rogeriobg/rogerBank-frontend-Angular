@@ -1,0 +1,30 @@
+.transactions-container h2 {
+    display: flex; /* Flexbox correto */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente, se necessário */
+    margin: auto;
+    margin-top: 100px;
+    width: 100%; /* Garante que ocupe a largura total */
+}
+.titulo-trans {
+    color: rgb(31, 203, 226);
+    margin-bottom:20px !important;
+
+}
+.btn-gerar{
+    display: flex; /* Flexbox correto */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente, se necessário */
+    margin: auto;
+    background-color:rgb(31, 203, 226);
+    color:white;
+    padding:12px;
+    border:none;
+    border-radius: 12px;
+    font-size:20px;
+}
+ul li{
+    list-style: none;
+    font-size:18px;
+    margin-inline:20px;
+}

@@ -1,28 +1,30 @@
 <div>
-    <app-header [menuRoutes]="menuRoutes"></app-header>
+  <app-header [menuRoutes]="menuRoutes"></app-header>
+</div>
+
+<div class="transactions-container">
+  <app-logout-button></app-logout-button>
+  <div>
+    <h2 class="titulo-trans">Minhas Transações</h2>
   </div>
-  
-  <div class="transactions-container">
-    <app-logout-button></app-logout-button>
-    <h2>Minhas Transações</h2>
-    
-    <div *ngIf="mensagemErro" class="erro-mensagem">
-      <p>{{ mensagemErro }}</p>
-    </div>
-    
-    <div *ngIf="!mensagemErro && transactions.length > 0">
-      <ul>
-        <li *ngFor="let transaction of transactions">
-          {{ transaction.type }}: R$ {{ transaction.amount | number: '1.2-2' }} - Data: {{ transaction.date | date:'short' }}
-        </li>
-      </ul>
-      
-      <button (click)="generatePDF()">Gerar Extrato PDF</button>
-    </div>
-    
-    <div *ngIf="!mensagemErro && transactions.length === 0">
-      <p>Nenhuma transação encontrada.</p>
-    </div>
-    
-    <app-footer></app-footer>
+  <div *ngIf="mensagemErro" class="erro-mensagem">
+    <p>{{ mensagemErro }}</p>
   </div>
+
+  <div *ngIf="!mensagemErro && transactions.length > 0">
+    <ul>
+      <li *ngFor="let transaction of transactions">
+        {{ transaction.type }}: R$ {{ transaction.amount | number: '1.2-2' }} - Data: {{ transaction.date | date:'short'
+        }}
+      </li>
+    </ul>
+
+    <button class="btn-gerar" (click)="generatePDF()">Gerar Extrato PDF</button>
+  </div>
+
+  <div *ngIf="!mensagemErro && transactions.length === 0">
+    <p>Nenhuma transação encontrada.</p>
+  </div>
+
+  <app-footer></app-footer>
+</div>

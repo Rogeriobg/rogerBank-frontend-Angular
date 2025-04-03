@@ -11,12 +11,20 @@ import { RouterModule } from '@angular/router';
 })
 export class HeaderComponent {
   @Input() menuRoutes: { path: string; label: string }[] = [];
-
-  idiomaSelecionado: string = 'pt'; // Padrão: Português
-  imagePath: string = 'assets/logo.png'; // Caminho da imagem
+  idiomaSelecionado: string = 'pt';
+  imagePath: string = 'assets/logo.png';
+  menuOpen: boolean = false;
 
   trocarIdioma(event: any) {
     this.idiomaSelecionado = event.target.value;
     console.log('Idioma alterado para:', this.idiomaSelecionado);
+  }
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  closeMenu() {
+    this.menuOpen = false;
   }
 }
